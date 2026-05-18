@@ -17,7 +17,7 @@ import { ref, onMounted } from 'vue';
 const posts = ref([]);
 
 onMounted(async () => {
-  const response = await fetch('src/comments.json');
+  const response = await fetch('comments.json');
   posts.value = await response.json();
 });
 

@@ -15,4 +15,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  base: '/UP_05.02-2026/', // <-- ДОБАВЬТЕ ЭТУ СТРОКУ
 })
