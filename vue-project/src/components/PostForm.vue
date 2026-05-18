@@ -1,14 +1,16 @@
 <template>
+  <div class="bov">Новый комментарий</div>
   <form @submit.prevent="addPost">
-    <input placeholder="Name" v-model="post.name" />
-    <input placeholder="Email" v-model="post.email" />
-    <input placeholder="Body" v-model="post.body" />
-    <button type="submit">Add</button>
+    <input placeholder="Название" v-model="post.name" />
+    <input placeholder="Почта" v-model="post.email" />
+    <textarea placeholder="Описание" v-model="post.body" />
+    <but type="submit">Добавить</but>
   </form>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import but from './but.vue'
 
 const emit = defineEmits(['create']);
 
@@ -38,5 +40,18 @@ input {
   margin-bottom: 15px;
   padding: 10px 15px;
   border: 1px solid teal;
+}
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border: 1px solid teal;
+  height: 100px;
+}
+.bov {
+  padding-bottom: 15px;
+  color: teal;
+  font-weight: bold;
 }
 </style>
